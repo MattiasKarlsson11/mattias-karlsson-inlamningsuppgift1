@@ -1,0 +1,86 @@
+#slider {
+
+    .slider-items {
+        justify-content: space-between;
+        align-items: center;
+        .slider-text{
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            @include lg{
+                align-items: flex-start;
+                padding-top: 200px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            h1{
+                text-align: center;
+                font-size: 40px;
+                font-weight: 700;
+                font-family: $font-poppins;
+                color: #252525;
+                @include md{                
+                font-size: 60px;
+                }
+                @include lg{
+                    text-align: start;                    
+                }                
+            }
+            p{
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 40px;
+                font-family: $font-roboto;
+                font-size: 16px;
+                color: #57647C;
+                line-height: 1.7rem;
+                @include md{
+                font-size: 20px;
+                width: 600px;
+                }
+                @include lg{
+                    text-align: start;
+                    width: 500px;
+                }                
+            }                 
+        }
+        .slider-img {
+            display: none;
+            @include lg{
+                display: block;
+                position: relative;               
+            }
+            .img-blob {
+               @include lg{               
+                position: absolute;
+                width: 1000px;
+                right: -350px;
+                top: -400px;
+                z-index: 0;                
+               }
+               @include xl{
+                right: -450px;
+                top: -430px;
+                width: 1100px;
+               }                
+            }
+            .img-desktop {
+                @include lg{
+                position: absolute;
+                z-index: 1;
+                right: -120px;
+                top: -150px;
+                width: 600px;
+                }
+                @include xl{
+                right: -220px;
+                top: -180px;
+                width: 900px;
+                }   
+            }
+        }
+    }    
+}

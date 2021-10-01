@@ -1,0 +1,109 @@
+.tools{
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    @include md{
+        padding-top: 100px;
+    }
+    @include lg{
+        flex-direction: row;
+    }
+    .tools-text{
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-family: $font-poppins;
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 60px;
+            text-align: center;
+            width: 300px;
+            @include md{
+                width: 400px;
+                font-size: 48px; 
+            } 
+        }
+        p{
+            text-align: center;
+            padding-bottom: 40px;
+            padding-top: 40px;
+            font-family: $font-roboto;
+            font-size: 18px;
+            line-height: 30px;
+            color: #57647C;
+            width: 300px;
+            @include md{
+                font-size: 18px;
+                width: 450px;
+            }
+            
+            @include lg{
+                padding-bottom: 40px;
+            }
+        }
+        button{
+            align-self: center;
+            padding: 16px 30px; 
+            margin-bottom: 50px;
+            @include lg{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .tools-info{
+        display: grid;
+        grid-template-columns: 200px ;
+        grid-template-rows: 240px ;
+        column-gap: 50px;
+        row-gap: 80px;
+        @include md {
+            grid-template-columns: 200px 200px;
+            grid-template-rows: 240px 240px;
+        }
+        @include lg{
+            
+            margin-left: 50px;
+        }
+        @include xl{
+            column-gap: 148px;
+            row-gap: 80px;
+            margin-left: 50px;
+            grid-template-columns: 260px 260px;
+            grid-template-rows: 240px 240px;
+        }
+        #tools-info-bits{
+            h2{
+                text-align: center;
+                font-family: $font-poppins;
+                font-size: 22px;
+                font-weight: 700;
+                padding: 24px 0px;
+                @include lg{
+                    text-align: start;
+                }
+            }
+            p{
+                text-align: center;
+                font-family: $font-roboto;
+                font-size: 18px;
+                font-weight: 400;
+                color: #57647C;
+                line-height: 30px;
+                @include lg{
+                    text-align: start;
+                }
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                @include lg{
+                    display: inline;
+                }
+            }
+        }   
+    }
+}

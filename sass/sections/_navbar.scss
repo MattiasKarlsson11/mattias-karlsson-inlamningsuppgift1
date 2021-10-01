@@ -1,0 +1,113 @@
+#header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-image: url(/images/BG.svg);
+    background-size: cover;
+    background-position: bottom;
+    height: 550px;
+    background-repeat: no-repeat;
+    z-index: -2;
+    @include md{
+        height: 650px;
+    }
+    @include lg{
+        height: 992px;
+    }
+    
+    .navbar-links{
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #57647c31;
+        padding-bottom: 1.5rem;
+        @include lg{
+            display: flex;
+            
+        }
+        
+        #hamburger {
+            padding-right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            @include lg{
+                display: none;
+
+            }
+        }
+        #navlink {
+            display: none;
+            flex-basis: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 1rem;
+            
+            @include lg{
+                display: block;
+                flex-direction: row;
+                flex-basis: auto;
+                position: relative;
+                z-index: 1;                
+                color: $black;
+            }
+            @include xl{
+                margin-right: -350px;
+            }
+
+            .nav-link {
+                text-decoration: none;
+                color: $black;
+                font-family: $font-roboto;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-weight: 500;
+                padding-left: 15px;
+                padding-right: 15px;
+            }    
+        }
+        #navlink.show {
+            display: flex;
+        }
+        
+        .btn{
+            display: none;
+            @include lg{
+                display: block;
+                background-color: transparent;
+                border-color: $orange ;
+                border-style: solid ;
+                border-radius: 5px;
+                border: 1px solid $orange;
+                padding: 10px 24px;
+                font-family: $font-roboto;
+                font-weight: 500;
+                font-size: 17px;
+                
+            }
+        }
+         #search{
+             display: none;
+             @include lg{
+                display: block;
+                font-size: 1.5rem; 
+                margin-left: -90px;
+                margin-right: -60px;
+            }
+            @include xl{
+                margin-right: -280px;
+                padding-left: 20px;
+                margin-left: 20px;
+            }
+         }
+         img {
+            width: 200px;
+            @include lg{
+                width: 280px;
+            }
+        }
+
+
+       
+    }
+
+}
